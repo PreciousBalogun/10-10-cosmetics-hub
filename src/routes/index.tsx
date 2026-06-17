@@ -50,7 +50,7 @@ function Home() {
               </span>
             </h1>
             <p className="mt-5 max-w-md text-base text-muted-foreground sm:text-lg">
-              Glossy. Plumping. Pigmented. Premium lip care made for the Nigerian girl who knows
+              Glossy. Plumping. Pigmented. Premium lip care made for every girl who knows
               she's already a ten.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
