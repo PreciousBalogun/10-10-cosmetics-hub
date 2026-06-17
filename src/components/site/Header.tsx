@@ -3,13 +3,6 @@ import { ShoppingBag } from "lucide-react";
 import { BrandMark } from "./BrandMark";
 import { useCart } from "@/lib/cart";
 
-const nav = [
-  { to: "/", label: "Home" },
-  { to: "/shop", label: "Shop" },
-  { to: "/shop", label: "Lip Gloss", search: { c: "Lip Gloss" as const } },
-  { to: "/shop", label: "Lip Oil", search: { c: "Lip Oil" as const } },
-] as const;
-
 export function Header() {
   const { count, hydrated } = useCart();
   return (
@@ -19,19 +12,31 @@ export function Header() {
           <BrandMark />
         </div>
         <nav className="hidden items-center justify-center gap-7 text-sm font-medium text-foreground/80 sm:flex">
-          {nav.map((n, i) => (
-            <Link
-              key={i}
-              to={n.to}
-              // @ts-expect-error optional search
-              search={n.search}
-              className="transition-colors hover:text-primary"
-              activeOptions={{ exact: true }}
-              activeProps={{ className: "text-primary" }}
-            >
-              {n.label}
-            </Link>
-          ))}
+          <Link
+            to="/"
+            className="transition-colors hover:text-primary"
+            activeOptions={{ exact: true }}
+            activeProps={{ className: "text-primary" }}
+          >
+            Home
+          </Link>
+          <Link to="/shop" className="transition-colors hover:text-primary" activeProps={{ className: "text-primary" }}>
+            Shop
+          </Link>
+          <Link
+            to="/shop"
+            search={{ c: "Lip Gloss" }}
+            className="transition-colors hover:text-primary"
+          >
+            Lip Gloss
+          </Link>
+          <Link
+            to="/shop"
+            search={{ c: "Lip Oil" }}
+            className="transition-colors hover:text-primary"
+          >
+            Lip Oil
+          </Link>
         </nav>
         <div className="flex items-center justify-end gap-2">
           <Link
