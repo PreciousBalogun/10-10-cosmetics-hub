@@ -161,6 +161,19 @@ function CartPage() {
                 Complete Order via WhatsApp
               </a>
 
+              <div className="my-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                <span className="h-px flex-1 bg-border" />
+                or
+                <span className="h-px flex-1 bg-border" />
+              </div>
+
+              <Link
+                to="/checkout"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-luxe transition-all hover:bg-[var(--brand-red-deep)]"
+              >
+                Order on Website
+              </Link>
+
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 We process orders via WhatsApp & DM. You'll confirm delivery and payment with us
                 directly.
