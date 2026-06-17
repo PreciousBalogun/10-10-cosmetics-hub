@@ -98,7 +98,7 @@ function ProductPage() {
               Shade · <span className="text-muted-foreground">{shade}</span>
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
-              {product.shades.map((s) => {
+              {product.shades.map((s: string) => {
                 const active = s === shade;
                 return (
                   <button
