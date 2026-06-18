@@ -20,22 +20,26 @@ export function Header() {
           >
             Home
           </Link>
-          <Link to="/shop" className="transition-colors hover:text-primary" activeProps={{ className: "text-primary" }}>
+          <Link
+            to="/shop"
+            className="transition-colors hover:text-primary"
+            activeProps={{ className: "text-primary" }}
+          >
             Shop
           </Link>
           <Link
-            to="/shop"
-            search={{ c: "Lip Gloss" }}
+            to="/about"
             className="transition-colors hover:text-primary"
+            activeProps={{ className: "text-primary" }}
           >
-            Lip Gloss
+            About
           </Link>
           <Link
-            to="/shop"
-            search={{ c: "Lip Oil" }}
+            to="/contact"
             className="transition-colors hover:text-primary"
+            activeProps={{ className: "text-primary" }}
           >
-            Lip Oil
+            Contact
           </Link>
         </nav>
         <div className="flex items-center justify-end gap-2">
